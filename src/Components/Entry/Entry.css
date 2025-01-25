@@ -1,0 +1,14 @@
+.entry {
+  margin: 0;
+  background-image: url("https://deadbydaylight.com/static/c3f2458c3a5bca701cb4ccc96f15cf66/653d1/dbd_keyart_tab_34c48816bb.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.entry__header {
+  margin: 0;
+  position: relative; /* relative to praent element */
+  top: 350px;
+  text-align: center;
+}

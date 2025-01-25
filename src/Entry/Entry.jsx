@@ -1,1 +1,0 @@
-import "./Entry.css";
