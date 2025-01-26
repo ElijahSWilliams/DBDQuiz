@@ -3,9 +3,11 @@ import lullaby from "../../assets/huntressLullaby.mp3";
 import drLaugh from "../../assets/drLaugh.mp3";
 import skillCheck from "../../assets/dbdSkillCheck.mp3";
 import "./Entry.css";
+import Quiz from "../Quiz/Quiz";
 
 const Entry = () => {
   const [isPlaying, setIsPlaying] = useState(false); //state for audio, set to false initially
+  const [isStarted, setIsStarted] = useState(false);
   const audioRef = useRef(null); // audioRef is used to hold a reference to the <audio> object
   //so you can control it (play, pause, etc.) directly without causing re-renders of the component.
   const startBtnAudioRef = useRef(null);
@@ -52,6 +54,7 @@ const Entry = () => {
     handleStartAudio(); //call audio function
 
     //start quiz
+    setIsStarted(true);
   };
 
   return (
@@ -62,9 +65,15 @@ const Entry = () => {
         {/* set btn text based on isPlaying value */}
         {isPlaying ? "La La La La" : "Muted"}
       </button>
-      <button onClick={handleStartQuiz} className="entry__play-btn">
-        Enter
-      </button>
+
+      {!isStarted ? ( //if not started, render btn
+        <button onClick={handleStartQuiz} className="entry__play-btn">
+          Enter
+        </button>
+      ) : (
+        //if started, render quiz
+        <Quiz />
+      )}
     </div>
   );
 };

@@ -1,0 +1,90 @@
+{
+  "easy": [
+    {
+      "question": "Which company developed Dead by Daylight?",
+      "options": ["Valve", "Behavior Interactive", "Rockstar Games", "EA"],
+      "correctAnswer": "Behavior Interactive"
+    },
+    {
+      "question": "What is the primary objective of the Survivors in Dead by Daylight?",
+      "options": [
+        "Eliminate all Killers",
+        "Repair generators and escape",
+        "Defeat other survivors",
+        "Collect bloodpoints"
+      ],
+      "correctAnswer": "Repair generators and escape"
+    },
+    {
+      "question": "Which of the following is a Killer in Dead by Daylight?",
+      "options": ["Dwight", "Meg", "The Nurse", "Kate"],
+      "correctAnswer": "The Nurse"
+    }
+  ],
+  "medium": [
+    {
+      "question": "Which perk allows a Survivor to see the Killer’s aura when they are healing?",
+      "options": [
+        "Dead Hard",
+        "Borrowed Time",
+        "Object of Obsession",
+        "Iron Will"
+      ],
+      "correctAnswer": "Object of Obsession"
+    },
+    {
+      "question": "What is the name of the Killer who has a special ability called 'The Hunt'?",
+      "options": ["The Hillbilly", "The Trapper", "The Cannibal", "The Pig"],
+      "correctAnswer": "The Pig"
+    },
+    {
+      "question": "Which of the following is NOT a map in Dead by Daylight?",
+      "options": [
+        "Autohaven Wreckers",
+        "The Gloomy Swamp",
+        "Red Forest",
+        "Coldwind Farm"
+      ],
+      "correctAnswer": "The Gloomy Swamp"
+    }
+  ],
+  "hard": [
+    {
+      "question": "What is the name of the entity that governs the rituals in Dead by Daylight?",
+      "options": ["The Dark One", "The Entity", "The Overseer", "The Hunter"],
+      "correctAnswer": "The Entity"
+    },
+    {
+      "question": "Which Killer’s special ability involves placing bear traps on the map?",
+      "options": [
+        "The Plague",
+        "The Trapper",
+        "The Ghost Face",
+        "The Deathslinger"
+      ],
+      "correctAnswer": "The Trapper"
+    },
+    {
+      "question": "Which map was introduced with the 'All-Kill' chapter?",
+      "options": [
+        "The Coldwind Farm",
+        "The Raccoon City Police Department",
+        "The Midwich Elementary School",
+        "The Yamaoka Estate"
+      ],
+      "correctAnswer": "The Raccoon City Police Department"
+    }
+  ],
+  "bonus": [
+    {
+      "question": "Which Survivor is known for their obsession with photography and has the perk 'Lithe'?",
+      "options": ["Kate Denson", "Meg Thomas", "Laurie Strode", "Nia Carlson"],
+      "correctAnswer": "Nia Carlson"
+    },
+    {
+      "question": "What creator created the TikTok sound, 'Take A Hit Makeala, Take A Hit!'?",
+      "options": ["Mish, Sainty, Cam Loso, Zerbs"],
+      "correctAnswer": "Mish"
+    }
+  ]
+}
