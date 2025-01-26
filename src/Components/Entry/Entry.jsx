@@ -8,7 +8,7 @@ import Quiz from "../Quiz/Quiz";
 const Entry = () => {
   const [isPlaying, setIsPlaying] = useState(false); //state for audio, set to false initially
   const [isStarted, setIsStarted] = useState(false);
-  const audioRef = useRef(null); // audioRef is used to hold a reference to the <audio> object
+  const audioRef = useRef(null); // audioRef is used to hold a reference to the <audio> object audioRef.current is the actual DOM node
   //so you can control it (play, pause, etc.) directly without causing re-renders of the component.
   const startBtnAudioRef = useRef(null);
 
@@ -20,11 +20,13 @@ const Entry = () => {
     ); /*  create audio object and assn it to startBtnAudioRef.current*/
   }, []);
 
+  //cleanup on unmount
   const handlePlay = () => {
     //check if audio exists
     if (audioRef.current) {
       //if audioref.current exists
       audioRef.current.currentTime = 10; //start the auio at 10 sec
+      audioRef.current.loop = true; //enable audio looping
       audioRef.current
         .play() //play audio
         .then(() => {
@@ -41,6 +43,7 @@ const Entry = () => {
     //check if audio exists
     if (startBtnAudioRef.current) {
       startBtnAudioRef.current.currentTime = 0.2;
+
       startBtnAudioRef.current
         .play()
         .then(() => {})
@@ -60,7 +63,7 @@ const Entry = () => {
   return (
     <div className="entry">
       {!isStarted && ( //if quiz not started, render header
-        <h1 className="entry__header">Welcome to the DBD Quiz</h1>
+        <h1 className="entry__header">The Dead By Daylight Quiz</h1>
       )}
 
       <button onClick={handlePlay} disabled={isPlaying}>

@@ -2,7 +2,8 @@ DBB Quiz: To Do: Add Killer and Survivor Icons to dtermine what the quiz
 will be on, Maybe A difficulty option, score counter, a timer, possible
 sound effects
 when pressing start quiz play dbd start sound
-when incorrect answer is picked then play doctor laughing sounds
+when incorrect answer is picked then play blowing up gen noise or doctor laughing sounds
 when correct answer then play gen complete sounds
 when finished the quiz with at least 5 correct, play all gens completed sounds
 if picking killer then play killer theme, if survivor then survivor theme
+play skill check noise when user gets a correct answer

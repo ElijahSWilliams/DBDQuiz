@@ -15,6 +15,7 @@
 
 .entry__play-btn {
   position: relative;
-  left: 630px;
+
+  right: 45px;
   top: 400px;
 }

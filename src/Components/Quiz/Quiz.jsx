@@ -9,14 +9,17 @@ const Quiz = () => {
   //set quiz questions on load
   useEffect(() => {
     //randomize questions
-    let randomNumber = Math.floor(Math.random() * quizData.bonus.length);
-    setQuestion(quizData.bonus[randomNumber]);
+    let randomNumber = Math.floor(Math.random() * quizData.length);
+    setQuestion(quizData[randomNumber]);
   }, []);
 
   return (
     <div className="quiz">
       <h2 className="quiz__question-counter">{currentQuestion + 1}</h2>
-      <h3>{question ? question.question : "Loading..."}</h3>
+      <h3 className="quiz__question">
+        {question ? question.question : "Loading..."}
+      </h3>
+      <ul className="quiz__options">{question.options}</ul>
     </div>
   );
 };
