@@ -12,3 +12,9 @@
   top: 350px;
   text-align: center;
 }
+
+.entry__play-btn {
+  position: relative;
+  left: 630px;
+  top: 400px;
+}
