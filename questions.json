@@ -85,6 +85,11 @@
       "question": "What creator created the TikTok sound, 'Take A Hit Makeala, Take A Hit!'?",
       "options": ["Mish, Sainty, Cam Loso, Zerbs"],
       "correctAnswer": "Mish"
+    },
+    {
+      "question": "Blah Blah Blah",
+      "options": [""],
+      "correctAnswer": ""
     }
   ]
 }

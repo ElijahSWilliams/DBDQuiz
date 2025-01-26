@@ -59,7 +59,10 @@ const Entry = () => {
 
   return (
     <div className="entry">
-      <h1 className="entry__header">Welcome to the DBD Quiz</h1>
+      {!isStarted && ( //if quiz not started, render header
+        <h1 className="entry__header">Welcome to the DBD Quiz</h1>
+      )}
+
       <button onClick={handlePlay} disabled={isPlaying}>
         {" "}
         {/* set btn text based on isPlaying value */}
