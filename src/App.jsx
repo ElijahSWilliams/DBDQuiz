@@ -17,7 +17,9 @@ function App() {
   return (
     <QuizContext.Provider value={{ isStarted, setIsStarted }}>
       <div className="page">
-        <button className="reset__btn">Reset</button>
+        <button className="reset__btn" onClick={resetQuiz}>
+          Reset
+        </button>
         <Entry />
       </div>
     </QuizContext.Provider>
