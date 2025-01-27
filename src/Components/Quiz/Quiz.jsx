@@ -9,9 +9,13 @@ const Quiz = () => {
   //set quiz questions on load
   useEffect(() => {
     //randomize questions
-    let randomNumber = Math.floor(Math.random() * quizData.length);
-    setQuestion(quizData[randomNumber]);
-  }, []);
+    if (quizData && quizData.length > 0) {
+      //check if quizData exists and isn't empty
+      let randomNumber = Math.floor(Math.random() * quizData.length); //logic to randomize questions
+      setQuestion(quizData[randomNumber]); //set question to a randomly picked question
+    }
+  }, [quizData]);
+  console.log(quizData);
 
   return (
     <div className="quiz">
@@ -19,7 +23,15 @@ const Quiz = () => {
       <h3 className="quiz__question">
         {question ? question.question : "Loading..."}
       </h3>
-      <ul className="quiz__options">{question.options}</ul>
+      <ul className="quiz__options">
+        {question && question.options ? (
+          question.options.map((option, key) => {
+            return <li className="quiz__option">{option}</li>;
+          })
+        ) : (
+          <li className="quiz__loading">Loading Options...</li>
+        )}
+      </ul>
     </div>
   );
 };

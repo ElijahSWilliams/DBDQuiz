@@ -1,13 +1,15 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useContext } from "react";
 import lullaby from "../../assets/huntressLullaby.mp3";
 import drLaugh from "../../assets/drLaugh.mp3";
 import skillCheck from "../../assets/dbdSkillCheck.mp3";
 import "./Entry.css";
 import Quiz from "../Quiz/Quiz";
+import QuizContext from "../../Context/QuizContext";
 
 const Entry = () => {
+  const { isStarted, setIsStarted } = useContext(QuizContext); //subscribe to quiz context
   const [isPlaying, setIsPlaying] = useState(false); //state for audio, set to false initially
-  const [isStarted, setIsStarted] = useState(false);
+
   const audioRef = useRef(null); // audioRef is used to hold a reference to the <audio> object audioRef.current is the actual DOM node
   //so you can control it (play, pause, etc.) directly without causing re-renders of the component.
   const startBtnAudioRef = useRef(null);
@@ -60,6 +62,11 @@ const Entry = () => {
     setIsStarted(true);
   };
 
+  const resetQuiz = () => {
+    console.log("Resetting");
+    setIsStarted(false);
+  };
+
   return (
     <div className="entry">
       {!isStarted && ( //if quiz not started, render header
@@ -74,7 +81,7 @@ const Entry = () => {
 
       {!isStarted ? ( //if not started, render btn
         <button onClick={handleStartQuiz} className="entry__play-btn">
-          Enter
+          Start
         </button>
       ) : (
         //if started, render quiz

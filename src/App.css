@@ -3,3 +3,9 @@
   text-align: center;
   position: relative;
 }
+
+.reset__btn {
+  position: absolute;
+  top: 750px;
+  right: 720px;
+}
