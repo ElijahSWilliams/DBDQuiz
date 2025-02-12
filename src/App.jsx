@@ -23,9 +23,4 @@ function App() {
           Reset
         </button>
         <Entry />
-      </div>
-    </QuizContext.Provider>
-  );
-}
-
-export default App;
+      </

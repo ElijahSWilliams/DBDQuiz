@@ -6,4 +6,5 @@ when incorrect answer is picked then play blowing up gen noise or doctor laughin
 when correct answer then play gen complete sounds
 when finished the quiz with at least 5 correct, play all gens completed sounds
 if picking killer then play killer theme, if survivor then survivor theme
-play skill check noise when user gets a correct answer
+play skill check noise when user gets a correct answer 
+score is renamed as bloodpoints
