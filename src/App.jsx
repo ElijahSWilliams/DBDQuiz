@@ -11,7 +11,9 @@ function App() {
 
   const resetQuiz = () => {
     console.log("Resetting");
-    setIsStarted(false);
+    setIsStarted(false); //reset quiz
+    //reset score
+    //reset question counter?
   };
 
   return (

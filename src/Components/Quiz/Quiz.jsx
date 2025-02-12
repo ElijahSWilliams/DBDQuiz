@@ -1,10 +1,13 @@
 import "./Quiz.css";
 import quizData from "../../../questions.json";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import QuizContext from "../../Context/QuizContext";
 
 const Quiz = () => {
   const [question, setQuestion] = useState([]); //set quiz to empty array
   const [currentQuestion, setCurrentQuestion] = useState(0); //set current question to 0
+  const [visible, setVisible] = useState(false);
+  const { isStarted } = useContext(QuizContext);
 
   //set quiz questions on load
   useEffect(() => {
@@ -17,8 +20,20 @@ const Quiz = () => {
   }, [quizData]);
   console.log(quizData);
 
+  //fade in quiz when started
+  useEffect(() => {
+    console.log(isStarted);
+    if (isStarted) {
+      setTimeout(() => {
+        setVisible(true);
+      }, 100);
+    } else {
+      setVisible(false);
+    }
+  }, [isStarted]);
+
   return (
-    <div className="quiz">
+    <div className={`quiz ${visible ? "quiz__visible" : ""}`}>
       <h2 className="quiz__question-counter">{currentQuestion + 1}</h2>
       <h3 className="quiz__question">
         {question ? question.question : "Loading..."}
